@@ -1,25 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class HeavyButton : MonoBehaviour
 {
     public bool isPressed = false;
     private void OnTriggerEnter(Collider other)
     {
-
-
-        if (other.CompareTag("Heavy Player") && isPressed == false)
+        if (other.tag == "HeavyPlayer" && !isPressed)
         {
             isPressed = true;
-            Debug.Log("Heavy player is on the button");
 
+            Debug.Log("Section Triggered");
         }
-
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Heavy Player") && isPressed == true)
+        if (other.tag == "Player" && isPressed)
         {
             isPressed = false;
             Debug.Log("Heavy player is off the button");
