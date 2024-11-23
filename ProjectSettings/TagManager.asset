@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - HeavyPlayer
+  - Audio
   layers:
   - Default
   - TransparentFX
