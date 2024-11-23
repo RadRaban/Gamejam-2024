@@ -10574,7 +10574,7 @@ Transform:
   m_GameObject: {fileID: 1042782892}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.454403, y: 0.69428015, z: 0.76164365}
+  m_LocalPosition: {x: 2.0544028, y: 0.69428015, z: 0.7616439}
   m_LocalScale: {x: 1.2000003, y: 1.2, z: 1.2000003}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10599,7 +10599,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 1025292637}
   m_Follow: {fileID: 1025292637}
   m_Lens:
     FieldOfView: 50.0181
@@ -10614,7 +10614,7 @@ MonoBehaviour:
     m_SensorSize: {x: 24.89, y: 18.66}
     Iso: 200
     ShutterSpeed: 0.005
-    Aperture: 16
+    Aperture: 17.6
     BladeCount: 5
     Curvature: {x: 2, y: 11}
     BarrelClipping: 0.25
@@ -11313,7 +11313,7 @@ MonoBehaviour:
   ShoulderOffset: {x: 1, y: 0.1, z: 0}
   VerticalArmLength: 0
   CameraSide: 0.66
-  CameraDistance: 1.6
+  CameraDistance: 4
   CameraCollisionFilter:
     serializedVersion: 2
     m_Bits: 1
@@ -12628,8 +12628,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262022137}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.454403, y: 0.69428015, z: 0.76164365}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 2.0544028, y: 0.69428015, z: 0.7616439}
   m_LocalScale: {x: 1.2000003, y: 1.2, z: 1.2000003}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12822,7 +12822,7 @@ Camera:
   m_FOVAxisMode: 0
   m_Iso: 200
   m_ShutterSpeed: 0.005
-  m_Aperture: 16
+  m_Aperture: 17.6
   m_FocusDistance: 10
   m_FocalLength: 20
   m_BladeCount: 5
