@@ -14,6 +14,9 @@ public class CharacterManager : MonoBehaviour
 
     void Start()
     {
+        //Hide the cursor 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         UpdateControl(currentCharacterIndex);
         cam.LookAt = characters[currentCharacterIndex].transform.GetChild(0);
         cam.Follow = characters[currentCharacterIndex].transform.GetChild(0);
