@@ -34,8 +34,15 @@ public class DoorOnButton : MonoBehaviour, IDoor
             }
         }
 
+        // Lerp the position of the door but only child object code
+        transform.GetChild(0).position = Vector3.Lerp(start.position, end.position, lerpValue);
+
+
+
         // Interpolate the position based on lerpValue
-        transform.position = Vector3.Lerp(start.position, end.position, lerpValue);
+        //transform.position = Vector3.Lerp(start.position, end.position, lerpValue);
+
+        //transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z), lerpValue);
     }
 
     public void OpenDoor()
@@ -45,7 +52,7 @@ public class DoorOnButton : MonoBehaviour, IDoor
     }
 
     public void CloseDoor()
-    {
+    { 
         closing = true;
         opening = false;
     }
