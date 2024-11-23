@@ -1,14 +1,18 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 public class CharacterManager : MonoBehaviour
 {
     public GameObject[] characters; // Assign characters in the inspector
     private int currentCharacterIndex = 0;
+    public CinemachineVirtualCamera cam; // Assign virtual camera in the inspector
 
     void Start()
     {
         UpdateControl(currentCharacterIndex);
+        cam.LookAt = characters[currentCharacterIndex].transform.GetChild(0);
+        cam.Follow = characters[currentCharacterIndex].transform.GetChild(0);
     }
 
     void Update()
@@ -48,5 +52,7 @@ public class CharacterManager : MonoBehaviour
         {
             playerInput.enabled = isActive;
         }
+        cam.LookAt = characters[characterIndex].transform.GetChild(0);
+        cam.Follow = characters[characterIndex].transform.GetChild(0);
     }
 }
