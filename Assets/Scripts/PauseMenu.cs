@@ -31,6 +31,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        AudioListener.volume = 1;
     }
 
     public void PauseGame()
@@ -41,6 +42,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        AudioListener.volume = 0;
     }
 
     public void LoadMainMenu()
@@ -49,6 +51,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        AudioListener.volume = 1;
         SceneManager.LoadScene("MainMenu"); // Replace "MainMenu" with your scene name
     }
 }

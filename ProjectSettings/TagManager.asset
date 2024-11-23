@@ -8,11 +8,13 @@ TagManager:
   - HeavyPlayer
   - Audio
   - HeavyObject
+  - Floor
+  - MetalFloor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - groundLayer
   - Water
   - UI
   - 
