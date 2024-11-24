@@ -49,7 +49,7 @@ public class scoring : MonoBehaviour
         Debug.Log(mode);
         Debug.Log("Score: " + (int)score);
         sceneName = scene.name;
-        if (sceneName == "EndScreen")
+        if (sceneName == "End")
         {
             Debug.Log("Score: " + (int)score);
         }

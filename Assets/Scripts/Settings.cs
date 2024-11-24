@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Settings : MonoBehaviour
 {
+    [SerializeField] public GameObject mainMenuUI;
+    [SerializeField] public GameObject settingsMenuUI;
     public void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -12,6 +14,7 @@ public class Settings : MonoBehaviour
     }
     public void Back()
     {
-        SceneManager.LoadSceneAsync("MainMenu");
+        mainMenuUI.SetActive(true);
+        settingsMenuUI.SetActive(false);
     }
 }
