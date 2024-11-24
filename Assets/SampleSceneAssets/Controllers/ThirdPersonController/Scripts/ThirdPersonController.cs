@@ -10,6 +10,8 @@ namespace StarterAssets
     [RequireComponent(typeof(PlayerInput))]
     public class ThirdPersonController : MonoBehaviour
     {
+        AudioManager audioManager;
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -115,6 +117,7 @@ namespace StarterAssets
 
         private void Awake()
         {
+            audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
             // get a reference to our main camera
             if (_mainCamera == null)
             {
@@ -288,8 +291,15 @@ namespace StarterAssets
                 // Jump
                 if (_input.jump && _jumpTimeoutDelta <= 0.0f)
                 {
+                    if (_verticalVelocity < 0.0f)
+                    {
+                        audioManager.PlaySFX(audioManager.jump);
+                        Debug.Log("Jumping");
+                    }
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+                    
+                        
 
                     // update animator if using character
                     if (_hasAnimator)

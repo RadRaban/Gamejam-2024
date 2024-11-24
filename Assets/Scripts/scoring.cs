@@ -10,7 +10,7 @@ using TMPro.Examples;
 public class scoring : MonoBehaviour
 {
     public static scoring Instance { get; private set; }
-    public static float score = 0;
+    public static int score = 0;
 
 
     Scene m_Scene;
@@ -49,11 +49,11 @@ public class scoring : MonoBehaviour
         Debug.Log(mode);
         Debug.Log("Score: " + (int)score);
         sceneName = scene.name;
-        if (sceneName == "DeathScreen")
+        if (sceneName == "EndScreen")
         {
             Debug.Log("Score: " + (int)score);
         }
-        else if (sceneName == "movementandgen")
+        else if (sceneName == "Testing")
         {
             score = 0;
         }

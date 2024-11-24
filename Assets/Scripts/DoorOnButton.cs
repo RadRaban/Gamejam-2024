@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class DoorOnButton : MonoBehaviour, IDoor
 {
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private bool isOpen = false;
     public bool opening = false;
     public bool closing = false;
@@ -49,12 +56,14 @@ public class DoorOnButton : MonoBehaviour, IDoor
     {
         opening = true;
         closing = false;
+        audioManager.PlaySFX(audioManager.doorOpen);
     }
 
     public void CloseDoor()
     { 
         closing = true;
         opening = false;
+        audioManager.PlaySFX(audioManager.doorClose);
     }
 
     public void ToggleDoor()

@@ -8,6 +8,13 @@ public class HeavyPlate : MonoBehaviour
     [SerializeField] private GameObject door;
 
     private IDoor doorScript;
+
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void Avake()
     {
         doorScript = door.GetComponent<IDoor>();
@@ -26,6 +33,7 @@ public class HeavyPlate : MonoBehaviour
         if (other.tag == "HeavyObject" && !isPressed)
         {
             isPressed = true;
+            audioManager.PlaySFX(audioManager.buttonPressed);
             doorScript.ToggleDoor();
             Debug.Log("Section Triggered");
         }
@@ -35,6 +43,7 @@ public class HeavyPlate : MonoBehaviour
         if (other.tag == "HeavyObject" && isPressed)
         {
             isPressed = false;
+            audioManager.PlaySFX(audioManager.buttonReleased);
             doorScript.ToggleDoor();
             Debug.Log("Heavy Object is off the button");
         }

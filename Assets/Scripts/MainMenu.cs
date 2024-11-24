@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("PlayerSwitchTesting");
+        SceneManager.LoadSceneAsync("Testing");
     }
 
     public void ShowSettings()

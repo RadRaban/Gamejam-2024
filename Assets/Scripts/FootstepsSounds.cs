@@ -6,6 +6,7 @@ public class FootstepManager : MonoBehaviour
     public LayerMask groundLayer; // Define what is considered ground
     public AudioSource audioSource; // The AudioSource component
     public AudioClip defaultFootstep; // Default sound if no specific surface is detected
+    public AudioClip sprinting;
     public FootstepSound[] surfaceSounds; // Array to define surface-specific sounds
 
     private CharacterController characterController;
@@ -13,6 +14,8 @@ public class FootstepManager : MonoBehaviour
     private string previousSurfaceTag; // Stores the most recently detected surface tag
     private float surfaceRecheckInterval = 0.5f; // Time interval to recheck the surface
     private float surfaceRecheckTimer = 0f; // Timer to track intervals
+    private bool isSprinting = false;
+    private bool isWalking = false;
 
     private void Start()
     {
@@ -33,9 +36,31 @@ public class FootstepManager : MonoBehaviour
         }
 
         // Check if the player is moving and on the ground
-        if (characterController.isGrounded && characterController.velocity.magnitude > 0.1f)
+        if (characterController.isGrounded && characterController.velocity.magnitude >= 5f)
         {
-            if (currentSurfaceTag != previousSurfaceTag)
+            if (isWalking)
+            {
+                StopFootstep();
+                isWalking = false;
+                isSprinting = true;
+            }
+            isSprinting = true;
+            if (!audioSource.isPlaying && isSprinting)
+            {
+                PlaySprinting();
+            }
+
+        }
+        else if (characterController.isGrounded && characterController.velocity.magnitude > 0.1f && characterController.velocity.magnitude < 5f)
+        {
+            if (isSprinting)
+            {
+                StopFootstep();
+                isSprinting = false;
+                isWalking = true;
+            }
+            isWalking = true;
+            if ((currentSurfaceTag != previousSurfaceTag) && isWalking)
             {
                 Debug.Log("Surface changed from " + previousSurfaceTag + " to " + currentSurfaceTag);
                 previousSurfaceTag = currentSurfaceTag;
@@ -43,7 +68,7 @@ public class FootstepManager : MonoBehaviour
                 PlayFootstep();
             }
             // Play footsteps on a timer or based on distance moved
-            if (!audioSource.isPlaying) // Ensure sounds don't overlap
+            if (!audioSource.isPlaying && isWalking) // Ensure sounds don't overlap
             {
                 PlayFootstep();
             }
@@ -51,6 +76,8 @@ public class FootstepManager : MonoBehaviour
         if (characterController.isGrounded && characterController.velocity.magnitude < 0.1f)
         {
             StopFootstep();
+            isWalking = false;
+            isSprinting = false;
         }
     }
 
@@ -64,6 +91,12 @@ public class FootstepManager : MonoBehaviour
         AudioClip clip = GetFootstepSound(currentSurfaceTag); // Use the current surface tag
         Debug.Log("Playing footstep sound: " + clip.name);
         audioSource.PlayOneShot(clip);
+    }
+
+    private void PlaySprinting()
+    {
+        Debug.Log("Playing sprinting sound");
+        audioSource.PlayOneShot(sprinting);
     }
 
     private string GetSurfaceTag()

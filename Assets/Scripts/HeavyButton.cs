@@ -5,6 +5,13 @@ using UnityEditor;
 
 public class HeavyButton : MonoBehaviour
 {
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     [SerializeField] private GameObject door;
 
     private IDoor doorScript;
@@ -26,6 +33,7 @@ public class HeavyButton : MonoBehaviour
         if (other.tag == "HeavyPlayer" && !isPressed)
         {
             isPressed = true;
+            audioManager.PlaySFX(audioManager.buttonPressed);
             doorScript.ToggleDoor();
             Debug.Log("Section Triggered");
         }
@@ -35,6 +43,7 @@ public class HeavyButton : MonoBehaviour
         if (other.tag == "HeavyPlayer" && isPressed)
         {
             isPressed = false;
+            audioManager.PlaySFX(audioManager.buttonReleased);
             doorScript.ToggleDoor();
             Debug.Log("Heavy player is off the button");
         }
