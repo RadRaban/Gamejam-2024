@@ -10,6 +10,7 @@ TagManager:
   - HeavyObject
   - Floor
   - MetalFloor
+  - Fiolka
   layers:
   - Default
   - TransparentFX

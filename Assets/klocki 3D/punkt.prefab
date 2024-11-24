@@ -54,8 +54,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 1.3, z: 0}
+  m_Radius: 0.8
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &2348987122908308305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35781007325b2384fa8544dd08205e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Picked: 0
 --- !u!1 &8133071206797272726
 GameObject:
   m_ObjectHideFlags: 0
