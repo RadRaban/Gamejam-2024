@@ -13,6 +13,8 @@ public class EndScreen : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         s = scoring.score;
         counterText.text = "Score: " + s;
     }
