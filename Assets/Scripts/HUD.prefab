@@ -263,7 +263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press ( T ) To Continue
+  m_text: "Wci\u015Bnij ( T ) aby kontunuowa\u0107"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -870,10 +870,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Instrukcja
+  m_text: "Instrukcja\nPoruszanie si\u0119 - WSAD\nBieganie - Shift\nSkakanie - Spacja\nZmiana
+    posaci manipulowanej - TAB\nMenu puazy - P / ESC\nObracanie kamer\u0105 - Mysz\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -904,14 +905,14 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_characterSpacing: 1
+  m_wordSpacing: 5
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 50
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -1113,7 +1114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press ( T ) To Continue
+  m_text: "Wci\u015Bnij ( T ) aby kontunuowa\u0107"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1247,10 +1248,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Story
+  m_text: "Witamy w samouczku gry!\r\nByli\u015Bcie zwyk\u0142ymi szczurami, cz\u0119\u015Bci\u0105
+    wi\u0119kszej spo\u0142eczno\u015Bci, ale pewnego dnia wasze \u017Cycie zosta\u0142o
+    wywr\xF3cone do g\xF3ry nogami. Znale\u017Ali\u015Bcie si\u0119 w zimnych, metalicznych
+    wn\u0119trzach tajemniczego laboratorium. \u015Awiat\u0142o jarzeni\xF3wek o\u015Blepia
+    was, a zapach chemikali\xF3w dra\u017Cni zmys\u0142y. Nie pami\u0119tacie, jak
+    tutaj trafili\u015Bcie, ale jedno jest pewne: co\u015B w was si\u0119 zmieni\u0142o.\r\nKa\u017Cdy
+    z was nosi w sobie anomali\u0119 \u2013 niezwyk\u0142\u0105 cech\u0119, kt\xF3ra
+    czyni was wyj\u0105tkowymi, ale i niepokoj\u0105cymi. Czy jest to dar, czy przekle\u0144stwo?
+    Tego jeszcze nie wiecie. Waszym zadaniem jest odkry\u0107 prawd\u0119 o waszej
+    naturze i znale\u017A\u0107 przyczyn\u0119 tych zmian.\r\nCzy uda wam si\u0119
+    zrozumie\u0107 w\u0142asn\u0105 natur\u0119, zanim eksperyment dobiegnie ko\u0144ca?
+    Czy anomalia stanie si\u0119 wasz\u0105 si\u0142\u0105, czy was zgubi? Decyzja
+    nale\u017Cy do was.\r\nRozpocznijcie gr\u0119 i zanurzcie si\u0119 w nieznane!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1281,14 +1294,14 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_characterSpacing: 1
+  m_wordSpacing: 5
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 50
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4

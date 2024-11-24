@@ -16,7 +16,7 @@ public class EndScreen : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         s = scoring.score;
-        counterText.text = "Score: " + s;
+        counterText.text = "Punkty: " + s;
     }
     public void BackToMenu()
     {
