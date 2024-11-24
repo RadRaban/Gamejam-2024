@@ -8,6 +8,8 @@ using TMPro.Examples;
 public class HUDUI : MonoBehaviour
 {
     public TextMeshProUGUI counterText;
+    [SerializeField] public GameObject StoryUI;
+    [SerializeField] public GameObject InstructionUI;
 
     public GameObject[] fiolki;
     public int ile = 0;
@@ -22,11 +24,39 @@ public class HUDUI : MonoBehaviour
         counterText.text = (s/50) + " / " + ile;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T) && (StoryUI.activeSelf || InstructionUI.activeSelf))
+        {
+            SwitchHud();
+        }
+    }
+
     void FixedUpdate()
     {
         s = scoring.score;
         counterText.text = (s / 50) + " / " + ile;
     }
 
+    void SwitchHud()
+    {
+        if (StoryUI.activeSelf)
+        {
+            NestScreen();
+        }
+        else
+        {
+            BackToGame();
+        }
 
+        void NestScreen()
+        {
+            StoryUI.SetActive(false);
+            InstructionUI.SetActive(true);
+        }
+        void BackToGame()
+        {
+            InstructionUI.SetActive(false);
+        }
+    }
 }
